@@ -1,18 +1,24 @@
 Pseudo:- 
 
-  run cron job at 10am  and 5pm
-  Fetch and parse CSV data from the URL
+  1:- run cron job at 10am  and 5pm
+
+  2:- Fetch and parse CSV data from the URL
+
   Note: the CSV data would be fetched and parsed in chunks
-  to handle large files efficiently.
-  const csvData = await this.csvParserUtil.fetchAndParseCSV(url);
-  await this.casesService.saveCases(csvData);
-  Once the data is saved, you can perform additional operations or update the database
-  with aggregated data based on the provided filters.
-  Example:
-  const startDate = new Date('2022-01-01');
-  const endDate = new Date('2022-12-31');
-  const aggregatedData = await this.casesService.getAggregatedCasesByCity(startDate, endDate);
-  console.log('Aggregated data:', aggregatedData);
+        to handle large files efficiently.
+
+  3:-const csvData = await this.csvParserUtil.fetchAndParseCSV(url);
+
+  4:-await this.casesService.saveCases(csvData);
+
+  5:- Once the data is saved, you can perform additional operations or update the database
+      with aggregated data based on the provided filters.
+      
+  6:- Example:
+      const startDate = new Date('2022-01-01');
+      const endDate = new Date('2022-12-31');
+      const aggregatedData = await this.casesService.getAggregatedCasesByCity(startDate, endDate);
+      console.log('Aggregated data:', aggregatedData);
 
 
 <p align="center">
